@@ -1,4 +1,4 @@
 ```
-docker build . -t ddclient/alpine
-docker run -d --restart=unless-stopped ddclient/alpine
+docker build . -t ddclient/alpine --build-arg DD_USERNAME='' --build-arg DD_PASSWORD='' 
+docker run -d --name ddclient --restart=unless-stopped ddclient/alpine
 ```
