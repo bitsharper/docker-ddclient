@@ -1,5 +1,5 @@
 # Dockerfile for DDCLIENT 
-## Description:
+
 This Docker file to build a container winth ddclien pre-nstalled and configured to use with the [FreeDNS](https://freedns.afraid.org) Dynamic DNS service.
 
 ```bash
