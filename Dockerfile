@@ -2,6 +2,7 @@ FROM alpine:latest
 LABEL maintainer="pasha.demichev@gmail.com"
 ARG DD_USERNAME
 ARG DD_PASSWORD
+ARG DD_DOMAIN
 ENV TZ=Pacific/Auckland
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && \
