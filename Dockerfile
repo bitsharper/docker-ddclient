@@ -9,5 +9,5 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone &
     apk update && apk add --no-cache ddclient
 
 COPY ddclient.conf /etc/ddclient/
-RUN sed -i -e "s/login=/login=${DD_USERNAME}/gi" -e "s/password=/password='${DD_PASSWORD}'/gi" -e "s/domain_name/'${DD_DOMAINNAME}'/gi /etc/ddclient/ddclient.conf
+RUN sed -i -e "s/login=/login=${DD_USERNAME}/gi" -e "s/password=/password='${DD_PASSWORD}'/gi" -e "s/domain_name/'${DD_DOMAIN}'/gi /etc/ddclient/ddclient.conf
 CMD [ "/usr/bin/ddclient", "-foreground", "-verbose" ]
